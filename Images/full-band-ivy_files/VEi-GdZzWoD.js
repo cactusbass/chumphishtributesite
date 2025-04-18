@@ -1,0 +1,7 @@
+;/*FB_PKG_DELIM*/
+
+__d("EventCometLightweightCreateRootQuery_facebookRelayOperation",[],(function(a,b,c,d,e,f){e.exports="9362478273843707"}),null);
+__d("EventCometLightweightCreateRootQuery$Parameters",["EventCometLightweightCreateRootQuery_facebookRelayOperation"],(function(a,b,c,d,e,f){"use strict";a={kind:"PreloadableConcreteRequest",params:{id:b("EventCometLightweightCreateRootQuery_facebookRelayOperation"),metadata:{},name:"EventCometLightweightCreateRootQuery",operationKind:"query",text:null}};e.exports=a}),null);
+__d("EventCometLightweightCreateRoot.entrypoint",["EventCometLightweightCreateRootQuery$Parameters","JSResourceForInteraction","WebPixelRatio"],(function(a,b,c,d,e,f,g){"use strict";a={getPreloadProps:function(a){var c=a.routeParams;a=a.routeProps;return{queries:{query$key:{parameters:b("EventCometLightweightCreateRootQuery$Parameters"),variables:{dialogEntryPoint:c.dialog_entry_point,groupID:c.group_id,groupThreadID:c.group_thread_id,llmResponseID:c.llm_response_id,locationID:c.default_location_id||"",postText:a.postText,scale:d("WebPixelRatio").get(),themePhotoID:c.default_theme_photo_id||""}}}}},root:c("JSResourceForInteraction")("EventCometLightweightCreateRoot.react").__setRef("EventCometLightweightCreateRoot.entrypoint")};g["default"]=a}),98);
+__d("FDSTriangleDownFilled16Icon",["cr:14104"],(function(a,b,c,d,e,f,g){"use strict";g["default"]=b("cr:14104")}),98);
+__d("FDSTriangleDownFilled16PNGIcon.react",["ix","fbicon"],(function(a,b,c,d,e,f,g,h){"use strict";a=d("fbicon")._(h("481882"),16);b=a;g["default"]=b}),98);

@@ -1,0 +1,927 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Main colors from the Chum graphic */
+    --primary-purple: #8A2BE2;    /* Deep purple from the tentacles */
+    --accent-green: #9FE625;      /* Bright lime green from background */
+    --secondary-blue: #40E0D0;    /* Turquoise accents */
+    --text-light: #FFFFFF;
+    --text-dark: #333333;
+    --background-dark: #121212;
+    --background-glow: rgba(138, 43, 226, 0.37);
+}
+
+/* Global styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background: var(--background-dark);
+    color: var(--text-light);
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .hero-content h1 {
+    font-family: 'Monoton', cursive;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        rgba(18, 18, 18, 0.97),
+        rgba(138, 43, 226, 0.15)
+    );
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Header styles */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+.main-header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo span {
+    font-family: 'Monoton', cursive;
+    font-size: 2rem;
+    font-weight: normal;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--primary-purple);
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.main-nav a {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    text-shadow: 0 0 10px var(--primary-purple);
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-green);
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero section */
+.hero-section {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(18, 18, 18, 0.5),
+        rgba(138, 43, 226, 0.3)
+    );
+    z-index: -1;
+}
+
+.hero-content {
+    padding: 2rem;
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+    margin-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    font-weight: normal;
+    color: var(--text-light);
+    text-shadow: 0 0 20px var(--primary-purple);
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.hero-content .subtitle {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    color: var(--accent-green);
+    text-shadow: 0 0 10px var(--accent-green);
+    margin-bottom: 2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.cta-button {
+    font-family: 'Orbitron', sans-serif;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--accent-green);
+    color: var(--primary-purple);
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px var(--accent-green);
+    border-color: var(--accent-green);
+    background: transparent;
+    color: var(--accent-green);
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px var(--primary-purple),
+                     0 0 20px var(--primary-purple),
+                     0 0 30px var(--accent-green);
+    }
+    to {
+        text-shadow: 0 0 20px var(--primary-purple),
+                     0 0 30px var(--primary-purple),
+                     0 0 40px var(--accent-green);
+    }
+}
+
+/* Section styles */
+section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+section h2 {
+    font-family: 'Monoton', cursive;
+    font-size: 3rem;
+    color: var(--accent-green);
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 10px var(--primary-purple);
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+/* Music section */
+.music-section {
+    background: rgba(138, 43, 226, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin: 2rem auto;
+    padding: 3rem;
+}
+
+/* Photo grid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    aspect-ratio: 1;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover {
+    transform: scale(1.02);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.1);
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    color: var(--text-light);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.photo-item:hover .photo-caption {
+    transform: translateY(0);
+}
+
+/* Shows section */
+.shows-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.show-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid var(--accent-green);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.show-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--accent-green);
+}
+
+.show-date {
+    font-size: 1.5rem;
+    color: var(--accent-green);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.show-venue {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* About section */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.band-info p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+.band-members {
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.band-members h3 {
+    color: var(--accent-green);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.band-members ul {
+    list-style: none;
+}
+
+.band-members li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Contact section */
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    background: rgba(18, 18, 18, 0.95);
+    padding: 2rem;
+    text-align: center;
+    border-top: 2px solid var(--accent-green);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--accent-green);
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.footer-social {
+    margin: 1rem 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1.3rem;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    section {
+        padding: 4rem 1rem;
+    }
+
+    section h2 {
+        font-size: 2.5rem;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .photo-item {
+        aspect-ratio: 16/9;
+    }
+}
+
+@media (max-width: 1200px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Keep existing audio player and form styles */
+.track-item {
+    padding: 8px;
+    margin: 4px 0;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.track-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.track-item.current-track {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+.player-instruction {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.manual-track-selector {
+    display: none;
+}
+
+/* Static Track Listings */
+.static-track-listings {
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.track-listing h3 {
+    color: var(--accent-green);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.track-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.track-item {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.track-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.track-item.current-track {
+    background-color: var(--accent-green);
+    color: var(--background-dark);
+    font-weight: bold;
+}
+
+/* Archive Player Wrapper */
+.archive-player-wrapper {
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    overflow: visible;
+}
+
+/* Custom Player */
+.custom-player {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+}
+
+.player-header {
+    margin-bottom: 10px;
+}
+
+.player-header h3 {
+    color: var(--accent-green);
+    font-size: 1.2rem;
+    margin: 0;
+    text-align: center;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.play-btn {
+    background-color: var(--accent-green);
+    color: var(--background-dark);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--accent-green);
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background-color: var(--accent-green);
+    border-radius: 4px;
+}
+
+.time-display {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    min-width: 100px;
+    text-align: right;
+}
+
+/* Player Container */
+.player-container {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Player Track Listing */
+.player-track-listing {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0;
+    margin-top: -50px; /* Negative margin to overlap with player */
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-bottom: 0;
+    min-height: 120px;
+    position: relative;
+    z-index: 2;
+}
+
+.player-track-listing .track-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: center;
+    margin-bottom: 0;
+    padding: 15px 5px;
+    min-height: 100px;
+}
+
+.player-track-listing .track-item {
+    padding: 3px 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    margin: 2px;
+}
+
+.player-track-listing .track-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.player-track-listing .track-item.current-track {
+    background-color: var(--accent-green);
+    color: var(--background-dark);
+    font-weight: bold;
+}
+
+/* Player Content */
+.player-content {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.album-art {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.album-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.track-info {
+    flex: 1;
+}
+
+.track-info h3 {
+    margin-bottom: 5px;
+    color: var(--accent-green);
+    font-size: 1rem;
+}
+
+#current-track {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Add a new style to ensure the player and track listing are properly connected */
+.player-section {
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Audio Player Styles */
+.player-section {
+    margin: 2rem 0;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.player-container {
+    position: relative;
+    width: 100%;
+}
+
+.player-controls {
+    padding: 1.5rem;
+    background-color: #222;
+}
+
+.show-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.show-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.show-button:hover {
+    background-color: #444;
+}
+
+.show-button.active {
+    background-color: #007bff;
+}
+
+.player-content {
+    position: relative;
+    z-index: 1;
+}
+
+.current-track {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    min-height: 1.5rem;
+}
+
+.audio-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.control-button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.control-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#play-pause {
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+}
+
+#play-pause:hover {
+    background-color: #0069d9;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+}
+
+#volume-slider {
+    width: 100px;
+    height: 4px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #555;
+    border-radius: 2px;
+    outline: none;
+}
+
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #aaa;
+    font-size: 0.8rem;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 4px;
+    background-color: #555;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 2px;
+    width: 0;
+}
+
+.player-track-listing {
+    background-color: #1a1a1a;
+    padding: 1rem;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: -1px;
+}
+
+.track-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.track-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #222;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #fff;
+}
+
+.track-item:hover {
+    background-color: #333;
+}
+
+.track-item.active {
+    background-color: #007bff;
+}
+
+.track-number {
+    width: 30px;
+    text-align: center;
+    font-weight: 500;
+    color: #aaa;
+}
+
+.track-item.active .track-number {
+    color: #fff;
+}
+
+.track-title {
+    flex-grow: 1;
+}
+
+/* Scrollbar styling for track list */
+.player-track-listing::-webkit-scrollbar {
+    width: 8px;
+}
+
+.player-track-listing::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.player-track-listing::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+}
+
+.player-track-listing::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
