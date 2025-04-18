@@ -37,6 +37,17 @@
         <div class="hero-content">
             <h1>CHUM</h1>
             <p class="subtitle">A Tribute to Phish</p>
+            <div class="hero-social">
+                <a href="https://www.facebook.com/chumphishband" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/chumphishband" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCchumphishband" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
             <div class="hero-cta">
                 <a href="#music" class="cta-button">Listen Now</a>
             </div>
@@ -163,6 +174,22 @@
                     <div class="show-venue">Ivy Room</div>
                 </div>
             </div>
+            
+            <div class="mailing-list-container">
+                <h3>Stay Informed</h3>
+                <p class="mailing-list-description">Stay informed of all show announcements by joining our mailing list!</p>
+                <form id="mailing-list-form" class="mailing-list-form">
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="form-group consent-group">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">I agree to receive emails from CHUM</label>
+                    </div>
+                    <button type="submit" class="submit-button">Subscribe</button>
+                </form>
+                <div id="mailing-list-message" class="mailing-list-message"></div>
+            </div>
         </section>
 
         <section id="press" class="press-section">
@@ -172,7 +199,6 @@
                     <h3>Santa Cruz | Phish tribute band Chum quite the catch at Woodhouse Brewing</h3>
                     <p class="press-date">March 19, 2025</p>
                     <p class="press-source">Santa Cruz Sentinel</p>
-                    <p class="press-excerpt">"Very few bands out there even dare to embrace the intricate discipline of executing these songs properly. San Francisco's Chum has earned elite status amongst the Phish community with their rare ability to capture the essence of the band's razor-sharp precision, organic improvisation and playful spirit. From 1.0 to 4.0, they have it all dialed. Even the most jaded vets nod in approval."</p>
                     <a href="https://www.santacruzsentinel.com/2025/03/19/santa-cruz-phish-tribute-band-chum-quite-the-catch-at-woodhouse-brewing/" class="press-link" target="_blank">Read the full article →</a>
                 </article>
             </div>
@@ -217,7 +243,15 @@
         <div class="footer-content">
             <div class="footer-logo">CHUM</div>
             <div class="footer-social">
-                <!-- Add your social media links here -->
+                <a href="https://www.facebook.com/chumphishband" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/chumphishband" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCchumphishband" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
             </div>
             <p>&copy; 2024 CHUM - A Tribute to Phish. All rights reserved.</p>
         </div>
@@ -225,5 +259,6 @@
 
     <script src="JS/player.js"></script>
     <script src="JS/contact.js"></script>
+    <script src="JS/mailing-list.js"></script>
 </body>
 </html>
