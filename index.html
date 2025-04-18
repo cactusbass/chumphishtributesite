@@ -1,192 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHUM - A Tribute to Phish</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron:wght@400;500;600;700&family=Syncopate:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Styles/styles.css">
-    <link rel="stylesheet" href="Styles/main.css">
-    <link rel="stylesheet" href="Styles/hero.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
+    p.p5 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: rgba(0, 0, 0, 0.85)}
+    li.li2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    li.li3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
+    span.s1 {font-kerning: none}
+    span.s2 {-webkit-text-stroke: 0px #000000}
+    span.s3 {text-decoration: underline ; font-kerning: none}
+    span.s4 {font-kerning: none; background-color: #b3b3b3}
+    ul.ul1 {list-style-type: disc}
+  </style>
 </head>
 <body>
-    <div class="background-overlay"></div>
-    <header class="main-header">
-        <nav class="main-nav">
-            <div class="nav-logo">
-                <span>CHUM</span>
-            </div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#music">Music</a></li>
-                <li><a href="#photos">Photos</a></li>
-                <li><a href="#shows">Shows</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero section moved outside main -->
-    <section id="home" class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>CHUM</h1>
-            <p class="subtitle">A Tribute to Phish</p>
-            <div class="hero-cta">
-                <a href="#music" class="cta-button">Listen Now</a>
-            </div>
-        </div>
-    </section>
-
-    <main>
-        <section id="music" class="section">
-            <div class="container">
-                <h2 class="section-title">Music</h2>
-                <div class="player-section">
-                    <div class="player-container">
-                        <div class="player-controls">
-                            <h3 class="recent-shows-title">Recent Shows</h3>
-                            <div class="show-selector">
-                                <button class="show-button active" data-show="Chum2024-07-20">
-                                    Mink's (7/20/2024)
-                                </button>
-                                <button class="show-button" data-show="Chum2025-04-04">
-                                    Santa Cruz (4/4/2025)
-                                </button>
-                                <button class="show-button" data-show="Chum2025-04-05">
-                                    Berkeley (4/5/2025)
-                                </button>
-                            </div>
-                            <div class="player-content">
-                                <div class="current-track">
-                                    <span id="current-track-title">Select a track to play</span>
-                                </div>
-                                <div class="audio-controls">
-                                    <button id="prev-track" class="control-button">
-                                        <i class="fas fa-step-backward"></i>
-                                    </button>
-                                    <button id="play-pause" class="control-button">
-                                        <i class="fas fa-play"></i>
-                                    </button>
-                                    <button id="next-track" class="control-button">
-                                        <i class="fas fa-step-forward"></i>
-                                    </button>
-                                    <div class="volume-control">
-                                        <i class="fas fa-volume-up"></i>
-                                        <input type="range" id="volume-slider" min="0" max="100" value="100">
-                                    </div>
-                                </div>
-                                <div class="progress-container">
-                                    <span id="current-time">0:00</span>
-                                    <div class="progress-bar">
-                                        <div class="progress"></div>
-                                    </div>
-                                    <span id="duration">0:00</span>
-                                </div>
-                                <audio id="audio-player" preload="metadata"></audio>
-                            </div>
-                        </div>
-                        <div class="player-track-listing">
-                            <div class="track-list" id="track-list">
-                                <!-- Tracks will be populated by JavaScript -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="photos" class="photos-section">
-            <h2>Photo Gallery</h2>
-            <div class="photo-grid">
-                <div class="photo-item">
-                    <img src="Images/with-phil-lesh.jpeg" alt="Meeting Phil Lesh">
-                    <div class="photo-caption">Meeting Phil Lesh!</div>
-                </div>
-                <div class="photo-item">
-                    <img src="Images/chad-bass-purple.jpg" alt="Chad on bass with purple lighting">
-                    <div class="photo-caption">Chad's third eye open!</div>
-                </div>
-                <div class="photo-item">
-                    <img src="Images/eric-vocal-closeup.jpg" alt="John on vocals close-up shot">
-                    <div class="photo-caption">John bringing the energy</div>
-                </div>
-                <div class="photo-item">
-                    <img src="Images/drummer-live..jpg" alt="Drummer performing live">
-                    <div class="photo-caption">Keeping the beat alive</div>
-                </div>
-                <div class="photo-item">
-                    <img src="Images/venue-night.jpg" alt="Venue at night">
-                    <div class="photo-caption">Evening at Rosebud Ranch</div>
-                </div>
-                <div class="photo-item">
-                    <img src="Images/crowd-selfie.jpg" alt="Selfie with the crowd">
-                    <div class="photo-caption">With our amazing fans!</div>
-                </div>
-                <div class="photo-item">
-                    <img src="Images/band-stage-fog.jpg" alt="Band performing with fog effects">
-                    <div class="photo-caption">Full band in action</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="shows" class="shows-section">
-            <h2>Upcoming Shows</h2>
-            <div class="shows-grid">
-                <!-- Add your upcoming shows here -->
-                <div class="show-card">
-                    <div class="show-date">Coming Soon</div>
-                    <div class="show-venue">Check back for upcoming dates!</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about-section">
-            <h2>About CHUM</h2>
-            <div class="about-content">
-                <div class="band-info">
-                    <p>CHUM brings the Phish experience to California, delivering high-energy performances that capture the spirit and improvisation of Phish's legendary shows.</p>
-                    <div class="band-members">
-                        <h3>The Band</h3>
-                        <ul>
-                            <li>John Greene - Keys and vocals</li>
-                            <li>Alex Bowman - Drums and vocals</li>
-                            <li>Chad Kimner - Bass and vocals</li>
-                            <li>Kevin Winzer - Guitar and vocals (Special Guest)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section">
-            <h2>Get in Touch</h2>
-            <div class="contact-content">
-                <form id="contactForm" onsubmit="return handleSubmit(event)">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">CHUM</div>
-            <div class="footer-social">
-                <!-- Add your social media links here -->
-            </div>
-            <p>&copy; 2024 CHUM - A Tribute to Phish. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="JS/player.js"></script>
-    <script src="JS/contact.js"></script>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">CHUM</span></p>
+<ul class="ul1">
+  <li class="li3"><span class="s2"></span><span class="s3">Home</span></li>
+  <li class="li3"><span class="s2"></span><span class="s3">Music</span></li>
+  <li class="li3"><span class="s2"></span><span class="s3">Photos</span></li>
+  <li class="li3"><span class="s2"></span><span class="s3">Shows</span></li>
+  <li class="li3"><span class="s2"></span><span class="s3">About</span></li>
+  <li class="li3"><span class="s2"></span><span class="s3">Contact</span></li>
+</ul>
+<p class="p1"><span class="s1"></span><br></p>
+<h1 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>CHUM</b></span></h1>
+<p class="p5"><span class="s1">A Tribute to Phish</span></p>
+<p class="p3"><span class="s3">Listen Now</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Music</b></span></h2>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Recent Shows</b></span></h3>
+<p class="p7"><span class="s4">Mink's (7/20/2024) Santa Cruz (4/4/2025) Berkeley (4/5/2025)</span></p>
+<p class="p2"><span class="s1">Select a track to play</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">0:00</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">0:00</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Photo Gallery</b></span></h2>
+<p class="p2"><span class="s1"><img src="file:///Attachment.png" alt="Attachment.png"></span></p>
+<p class="p2"><span class="s1">Meeting Phil Lesh!</span></p>
+<p class="p2"><span class="s1"><img src="file:///Attachment.png" alt="Attachment.png"></span></p>
+<p class="p2"><span class="s1">Chad's third eye open!</span></p>
+<p class="p2"><span class="s1"><img src="file:///Attachment.png" alt="Attachment.png"></span></p>
+<p class="p2"><span class="s1">John bringing the energy</span></p>
+<p class="p2"><span class="s1"><img src="file:///Attachment.png" alt="Attachment.png"></span></p>
+<p class="p2"><span class="s1">Keeping the beat alive</span></p>
+<p class="p2"><span class="s1"><img src="file:///Attachment.png" alt="Attachment.png"></span></p>
+<p class="p2"><span class="s1">Evening at Rosebud Ranch</span></p>
+<p class="p2"><span class="s1"><img src="file:///Attachment.png" alt="Attachment.png"></span></p>
+<p class="p2"><span class="s1">With our amazing fans!</span></p>
+<p class="p2"><span class="s1"><img src="file:///Attachment.png" alt="Attachment.png"></span></p>
+<p class="p2"><span class="s1">Full band in action</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Upcoming Shows</b></span></h2>
+<p class="p2"><span class="s1">Coming Soon</span></p>
+<p class="p2"><span class="s1">Check back for upcoming dates!</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>About CHUM</b></span></h2>
+<p class="p5"><span class="s1">CHUM brings the Phish experience to California, delivering high-energy performances that capture the spirit and improvisation of Phish's legendary shows.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>The Band</b></span></h3>
+<ul class="ul1">
+  <li class="li2"><span class="s2"></span><span class="s1">John Greene - Keys and vocals</span></li>
+  <li class="li2"><span class="s2"></span><span class="s1">Alex Bowman - Drums and vocals</span></li>
+  <li class="li2"><span class="s2"></span><span class="s1">Chad Kimner - Bass and vocals</span></li>
+  <li class="li2"><span class="s2"></span><span class="s1">Eric Schiff - Guitar and vocals (Special Guest)</span></li>
+</ul>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Get in Touch</b></span></h2>
+<p class="p7"><span class="s4">Send Message</span></p>
+<p class="p2"><span class="s1">CHUM</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">© 2024 CHUM - A Tribute to Phish. All rights reserved.</span></p>
 </body>
 </html>
