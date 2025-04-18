@@ -1,0 +1,480 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-purple: #8A2BE2;
+    --accent-green: #9FE625;
+    --secondary-blue: #40E0D0;
+    --text-light: #FFFFFF;
+    --text-dark: #333333;
+    --background-dark: #121212;
+    --background-glow: rgba(138, 43, 226, 0.37);
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background: var(--primary-purple);
+    color: var(--text-light);
+}
+
+/* Main element styles */
+main {
+    width: 100%;
+    position: relative;
+}
+
+/* Section styles */
+section {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    padding: 2rem;
+}
+
+/* Navigation styles */
+nav {
+    background-color: transparent;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-green);
+}
+
+/* Section styles - exclude hero section */
+section:not(.hero-section) {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+}
+
+input, textarea {
+    padding: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+}
+
+button {
+    background-color: var(--accent-green);
+    color: var(--text-dark);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-blue);
+}
+
+/* Footer styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+/* Enhanced Audio Player Styles */
+.audio-player-wrapper {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.now-playing {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.now-playing-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent-green);
+}
+
+.now-playing-band {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.main-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.player-controls button {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.player-controls button:hover {
+    color: var(--accent-green);
+}
+
+/* Container styles */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Photo wall layout */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 1mm;
+    margin: 0;
+    padding: 0;
+}
+
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin: 1mm;
+}
+
+/* First photo - Playin' in the Band */
+.photo-item:nth-child(1) {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 2;
+}
+
+/* John's all smiles */
+.photo-item:nth-child(2) {
+    grid-column: 5 / span 4;
+    grid-row: 1 / span 1;
+}
+
+/* Eric's axe */
+.photo-item:nth-child(3) {
+    grid-column: 5 / span 4;
+    grid-row: 2 / span 1;
+}
+
+/* Red, White and Alex */
+.photo-item:nth-child(4) {
+    grid-column: 1 / span 4;
+    grid-row: 3 / span 2;
+}
+
+/* Chad's third eye photo */
+.photo-item:nth-child(5) {
+    grid-column: 5 / span 4;
+    grid-row: 3 / span 2;
+}
+
+.photo-item:nth-child(5) img {
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Evening at Rosebud Ranch */
+.photo-item:nth-child(6) {
+    grid-column: 1 / span 4;
+    grid-row: 5 / span 2;
+}
+
+/* The fog that surrounds */
+.photo-item:nth-child(7) {
+    grid-column: 5 / span 4;
+    grid-row: 5 / span 2;
+}
+
+/* Suck it Al */
+.photo-item:nth-child(8) {
+    grid-column: 1 / span 3;
+    grid-row: 7 / span 2;
+}
+
+/* Bass hands */
+.photo-item:nth-child(9) {
+    grid-column: 4 / span 5;
+    grid-row: 7 / span 2;
+}
+
+/* ER */
+.photo-item:nth-child(10) {
+    grid-column: 1 / span 4;
+    grid-row: 9 / span 2;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo-item:hover .photo-caption {
+    opacity: 1;
+}
+
+.photo-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .photo-grid {
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 5px;
+    }
+    
+    .photo-item:nth-child(1) {
+        grid-column: 1 / span 3;
+    }
+    
+    .photo-item:nth-child(2) {
+        grid-column: 4 / span 3;
+    }
+    
+    .photo-item:nth-child(3) {
+        grid-column: 4 / span 3;
+    }
+    
+    .photo-item:nth-child(4) {
+        grid-column: 1 / span 3;
+    }
+    
+    .photo-item:nth-child(5) {
+        grid-column: 4 / span 3;
+    }
+    
+    .photo-item:nth-child(6) {
+        grid-column: 1 / span 3;
+    }
+    
+    .photo-item:nth-child(7) {
+        grid-column: 4 / span 3;
+    }
+    
+    .photo-item:nth-child(8) {
+        grid-column: 1 / span 4;
+    }
+    
+    .photo-item:nth-child(9) {
+        grid-column: 5 / span 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 4px;
+    }
+    
+    .photo-item:nth-child(n) {
+        grid-column: span 1;
+    }
+    
+    .photo-item:nth-child(1),
+    .photo-item:nth-child(4),
+    .photo-item:nth-child(8) {
+        grid-column: span 3;
+    }
+}
+
+.testimonial {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid var(--accent-green);
+    font-style: italic;
+}
+
+.testimonial p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.testimonial cite {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    color: var(--accent-green);
+    font-weight: 500;
+}
+
+.shows-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.show-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.show-card:hover {
+    transform: translateY(-5px);
+}
+
+.show-date {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent-green);
+    margin-bottom: 0.5rem;
+}
+
+.show-venue {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* Press Section Styles */
+.press-section {
+    padding: 4rem 2rem;
+    background: var(--background-color);
+}
+
+.press-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.press-article {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.press-article:hover {
+    transform: translateY(-5px);
+}
+
+.press-article h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.press-date, .press-source {
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.press-excerpt {
+    color: var(--text-color);
+    font-style: italic;
+    margin: 1.5rem 0;
+    line-height: 1.6;
+}
+
+.press-link {
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.press-link:hover {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .press-section {
+        padding: 3rem 1rem;
+    }
+    
+    .press-article {
+        padding: 1.5rem;
+    }
+}
+
+/* Section headers in the body */
+section h2 {
+    color: var(--accent-green);
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2.2rem;
+    text-shadow: 0 0 10px rgba(159, 230, 37, 0.5);
+}
