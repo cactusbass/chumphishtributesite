@@ -1,0 +1,248 @@
+/* Responsive Design Styles */
+
+/* Fluid Typography */
+:root {
+    --font-size-base: 16px;
+    --font-size-h1: clamp(2.5rem, 5vw, 5rem);
+    --font-size-h2: clamp(1.8rem, 3vw, 2.2rem);
+    --font-size-h3: clamp(1.2rem, 2vw, 1.5rem);
+    --font-size-body: clamp(1rem, 1.5vw, 1.1rem);
+    --font-size-small: clamp(0.8rem, 1vw, 0.9rem);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .main-nav {
+        padding: 0.5rem;
+    }
+    
+    .nav-logo {
+        font-size: 1.5rem;
+    }
+    
+    .main-nav ul {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        padding: 1rem 0;
+        z-index: 1000;
+    }
+    
+    .main-nav ul.active {
+        display: flex;
+    }
+    
+    .main-nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .main-nav ul li a {
+        display: block;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        z-index: 1001;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+/* Hero Section Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 80vh;
+    }
+    
+    .hero-content h1 {
+        font-size: var(--font-size-h1);
+    }
+    
+    .hero-content .subtitle {
+        font-size: var(--font-size-h3);
+    }
+    
+    .hero-social {
+        gap: 1rem;
+    }
+    
+    .hero-social a {
+        width: 44px;
+        height: 44px;
+        font-size: 1.5rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: var(--font-size-body);
+    }
+}
+
+/* Photo Gallery Responsive */
+@media (max-width: 992px) {
+    .photo-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0.5rem;
+    }
+    
+    .photo-item:nth-child(n) {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    
+    .photo-item:nth-child(1),
+    .photo-item:nth-child(4),
+    .photo-item:nth-child(7) {
+        grid-column: span 4;
+        grid-row: span 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .photo-item:nth-child(n) {
+        grid-column: span 1;
+    }
+    
+    .photo-item:nth-child(1),
+    .photo-item:nth-child(4),
+    .photo-item:nth-child(7) {
+        grid-column: span 2;
+    }
+}
+
+/* Music Player Responsive */
+@media (max-width: 768px) {
+    .player-section {
+        padding: 1rem;
+    }
+    
+    .player-container {
+        flex-direction: column;
+    }
+    
+    .player-controls {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .player-track-listing {
+        width: 100%;
+        max-height: 300px;
+    }
+    
+    .show-selector {
+        flex-wrap: wrap;
+    }
+    
+    .show-button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .audio-controls {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .volume-control {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Shows Section Responsive */
+@media (max-width: 768px) {
+    .shows-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .show-card {
+        padding: 1rem;
+    }
+    
+    .mailing-list-container {
+        padding: 1.5rem;
+    }
+    
+    .mailing-list-form {
+        width: 100%;
+    }
+}
+
+/* Press Section Responsive */
+@media (max-width: 768px) {
+    .press-section {
+        padding: 2rem 1rem;
+    }
+    
+    .press-article {
+        padding: 1rem;
+    }
+    
+    .press-article h3 {
+        font-size: var(--font-size-h3);
+    }
+}
+
+/* About Section Responsive */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 1rem;
+    }
+    
+    .band-members ul {
+        padding-left: 1rem;
+    }
+}
+
+/* Contact Section Responsive */
+@media (max-width: 768px) {
+    .contact-content {
+        padding: 1rem;
+    }
+    
+    .contact-content form {
+        width: 100%;
+    }
+    
+    .contact-content input,
+    .contact-content textarea {
+        width: 100%;
+    }
+}
+
+/* Footer Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 1rem;
+    }
+    
+    .footer-social {
+        gap: 1rem;
+    }
+    
+    .footer-social a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+} 

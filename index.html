@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>CHUM - A Tribute to Phish</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="Styles/styles.css">
     <link rel="stylesheet" href="Styles/main.css">
     <link rel="stylesheet" href="Styles/hero.css">
+    <link rel="stylesheet" href="Styles/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="background-overlay"></div>
@@ -19,6 +21,9 @@
             <div class="nav-logo">
                 <span>CHUM</span>
             </div>
+            <button class="hamburger-menu" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#music">Music</a></li>
@@ -260,5 +265,6 @@
     <script src="JS/player.js"></script>
     <script src="JS/contact.js"></script>
     <script src="JS/mailing-list.js"></script>
+    <script src="Scripts/main.js"></script>
 </body>
 </html>
