@@ -170,8 +170,8 @@ ul, ol { list-style: none; }
 .show-card-venue { font-size: 1rem; font-weight: 600; margin-bottom: var(--space-xs); }
 .show-card-location { font-size: 0.85rem; color: var(--color-text-muted); }
 .show-card-link { display: inline-flex; align-items: center; gap: var(--space-sm); margin-top: var(--space-md); font-size: 0.85rem; color: var(--color-secondary); }
-.show-card-tickets { background: var(--color-accent); color: var(--color-bg) !important; padding: var(--space-sm) var(--space-md); border-radius: var(--radius-md); font-weight: 600; transition: all var(--transition-fast); }
-.show-card-tickets:hover, .show-card-tickets:active, .show-card-tickets:visited { background: var(--color-text); color: var(--color-bg) !important; transform: translateY(-2px); }
+.show-card-tickets, a.show-card-tickets { background: var(--color-accent); color: #0D0D12 !important; -webkit-text-fill-color: #0D0D12 !important; padding: var(--space-sm) var(--space-md); border-radius: var(--radius-md); font-weight: 600; transition: all var(--transition-fast); }
+.show-card-tickets:hover, .show-card-tickets:active, .show-card-tickets:visited, a.show-card-tickets:hover, a.show-card-tickets:active, a.show-card-tickets:visited { background: var(--color-text); color: #0D0D12 !important; -webkit-text-fill-color: #0D0D12 !important; transform: translateY(-2px); }
 .shows-empty { text-align: center; padding: var(--space-xl); color: var(--color-text-muted); }
 .shows-grid-past .show-card { opacity: 0.7; }
 .shows-grid-past .show-card:hover { opacity: 1; }
