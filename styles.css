@@ -155,6 +155,7 @@ ul, ol { list-style: none; }
 .photo-item { position: relative; overflow: hidden; border-radius: var(--radius-md); aspect-ratio: 1; }
 .photo-item.photo-wide { grid-column: span 2; aspect-ratio: 2/1; }
 .photo-item img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-slow); }
+.photo-item img.photo-top { object-position: top; }
 .photo-item:hover img { transform: scale(1.08); }
 .photo-item figcaption { position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-md); background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent); font-size: 0.85rem; color: var(--color-text); transform: translateY(100%); transition: transform var(--transition-base); }
 .photo-item:hover figcaption { transform: translateY(0); }
