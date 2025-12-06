@@ -244,11 +244,48 @@ const Shows = {
 };
 
 const Forms = {
+    mailingListUrl: 'https://formspree.io/f/manrbapn',
+
     init() { this.initMailingForm(); this.initContactForm(); },
+
     initMailingForm() {
         const form = document.getElementById('mailing-form');
         const message = document.getElementById('mailing-message');
-        form?.addEventListener('submit', (e) => { e.preventDefault(); const email = form.querySelector('input[type="email"]').value; message.textContent = `Thanks! ${email} has been added to our mailing list.`; message.className = 'mailing-message success'; form.reset(); setTimeout(() => { message.textContent = ''; message.className = 'mailing-message'; }, 5000); });
+        const url = this.mailingListUrl;
+
+        form?.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = form.querySelector('input[type="email"]').value;
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
+            btn.disabled = true;
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({ email })
+                });
+
+                if (!response.ok) throw new Error('Submission failed');
+
+                message.textContent = `Thanks! ${email} has been added to our mailing list.`;
+                message.className = 'mailing-message success';
+                form.reset();
+            } catch (error) {
+                message.textContent = 'Something went wrong. Please try again.';
+                message.className = 'mailing-message error';
+            }
+
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+            setTimeout(() => { message.textContent = ''; message.className = 'mailing-message'; }, 5000);
+        });
     },
     initContactForm() {
         const form = document.getElementById('contact-form');
