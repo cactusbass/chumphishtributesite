@@ -16,6 +16,9 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <!-- Single consolidated stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -45,7 +48,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-bg" style="background-image: url('Images/full-band-ivy.jpg');"></div>
+        <div class="hero-bg" style="background-image: url('Images/cornerstone-crowd.jpg');"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">CHUM</h1>
@@ -246,59 +249,48 @@
         <section id="photos" class="section section-alt">
             <div class="container">
                 <h2 class="section-title">Photos</h2>
-                <div class="photo-gallery">
-                    <figure class="photo-item photo-wide">
-                        <img src="Images/playin-in-band.jpeg" alt="Chum performing with Phil Lesh" class="photo-top" loading="lazy">
-                        <figcaption>Playin' in the Band</figcaption>
-                    </figure>
-                    <figure class="photo-item">
-                        <img src="Images/John-all-smiles.jpg" alt="John Greene on keys" loading="lazy">
-                        <figcaption>John's all smiles</figcaption>
-                    </figure>
-                    <figure class="photo-item">
-                        <img src="Images/Eric-axe.jpeg" alt="Eric Schiff on guitar" loading="lazy">
-                        <figcaption>Eric's axe</figcaption>
-                    </figure>
-                    <figure class="photo-item photo-wide">
-                        <img src="Images/IMG_0123.jpeg" alt="Chum at Ivy Room December 2024" loading="lazy">
-                        <figcaption>Ivy Room 12/6</figcaption>
-                    </figure>
-                    <figure class="photo-item">
-                        <img src="Images/chad-third-eye.jpg" alt="Chad Kimner on bass" loading="lazy">
-                        <figcaption>Chad's third eye open</figcaption>
-                    </figure>
-                    <figure class="photo-item">
-                        <img src="Images/IMG_4792.JPG" alt="Chum at Ivy Room December 2024" loading="lazy">
-                        <figcaption>Ivy Room 12/6</figcaption>
-                    </figure>
-                    <figure class="photo-item photo-wide">
-                        <img src="Images/red-white-alex.jpg" alt="Alex Bowman on drums" loading="lazy">
-                        <figcaption>Red, White and Alex</figcaption>
-                    </figure>
-                    <figure class="photo-item">
-                        <img src="Images/IMG_0024.jpeg" alt="Laser beams at Chum show" loading="lazy">
-                        <figcaption>She said, "I hate laser beams"</figcaption>
-                    </figure>
-                    <figure class="photo-item">
-                        <img src="Images/evening-rosebud.jpg" alt="Evening at Rosebud Ranch" loading="lazy">
-                        <figcaption>Evening at Rosebud Ranch</figcaption>
-                    </figure>
-                    <figure class="photo-item photo-wide">
-                        <img src="Images/band-stage-fog.jpg" alt="The band in fog" loading="lazy">
-                        <figcaption>The fog that surrounds</figcaption>
-                    </figure>
-                    <figure class="photo-item">
-                        <img src="Images/suck-it-al.jpg" alt="Stage shot" loading="lazy">
-                        <figcaption>Suck it Al</figcaption>
-                    </figure>
-                    <figure class="photo-item">
-                        <img src="Images/bass-hands.jpeg" alt="Bass hands close-up" loading="lazy">
-                        <figcaption>Bass hands</figcaption>
-                    </figure>
-                    <figure class="photo-item photo-wide">
-                        <img src="Images/ER.jpeg" alt="Everything's Right" loading="lazy">
-                        <figcaption>Everything's Right</figcaption>
-                    </figure>
+                <div class="swiper photo-carousel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="Images/chum5491.jpg" alt="Live at Cornerstone" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/chum4842.jpg" alt="Live at Cornerstone" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/chum5118.jpg" alt="Live at Cornerstone" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/chum4689.jpg" alt="Live at Cornerstone" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/chum4740.jpg" alt="Live at Cornerstone" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/chum5654.jpg" alt="Live at Cornerstone" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/chum5880.jpg" alt="Live at Cornerstone" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/band-stage-fog.jpg" alt="CHUM live" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/playin-in-band.jpeg" alt="CHUM live" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/evening-rosebud.jpg" alt="CHUM live" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/John-all-smiles.jpg" alt="CHUM live" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/bass-hands.jpeg" alt="CHUM live" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
@@ -415,5 +407,26 @@
 
     <!-- Scripts -->
     <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const photoSwiper = new Swiper('.photo-carousel', {
+            loop: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            keyboard: {
+                enabled: true,
+            },
+        });
+    </script>
 </body>
 </html>

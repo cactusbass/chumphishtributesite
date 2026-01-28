@@ -150,6 +150,8 @@ const Shows = {
 
     // Fallback data (used if Google Sheet fails to load)
     fallbackShows: [
+        { date: '2026-04-18', venue: 'Shakedown Tuscany', location: 'Phish After Party' },
+        { date: '2026-03-07', venue: 'The Crepe Place', location: 'Santa Cruz, CA', ticketLink: 'https://www.ticketweb.com/event/chum-the-crepe-place-tickets/14114024?pl=thecrepeplace' },
         { date: '2025-04-05', venue: 'Ivy Room', location: 'Albany, CA', archiveId: 'Chum2025-04-05' },
         { date: '2025-04-04', venue: 'Woodhouse Brewery', location: 'Santa Cruz, CA', archiveId: 'Chum2025-04-04' },
         { date: '2025-02-01', venue: 'Crazy Horse', location: 'Nevada City, CA', archiveId: 'Chum2025-02-01' },
