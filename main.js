@@ -146,7 +146,9 @@ const Shows = {
     // 1. Create a Google Sheet with columns: date, venue, location, archiveId, ticketLink
     // 2. Go to File > Share > Publish to web > Select "CSV" format
     // 3. Copy the URL and paste it below
-    sheetUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRDg2BLQStfvp9iaR0Mypw1MmX6xCeURVemGfLwi1FIywrNnsTA_0-XXdof8TB6SIFCf0On5TZbEmfr/pub?gid=316725428&single=true&output=csv',
+    // Google Sheet disabled temporarily — using fallback data until sheet publishing syncs
+    // sheetUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRDg2BLQStfvp9iaR0Mypw1MmX6xCeURVemGfLwi1FIywrNnsTA_0-XXdof8TB6SIFCf0On5TZbEmfr/pub?gid=316725428&single=true&output=csv',
+    sheetUrl: '',
 
     // Fallback data (used if Google Sheet fails to load)
     fallbackShows: [
