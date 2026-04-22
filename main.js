@@ -146,16 +146,14 @@ const Shows = {
     // 1. Create a Google Sheet with columns: date, venue, location, archiveId, ticketLink
     // 2. Go to File > Share > Publish to web > Select "CSV" format
     // 3. Copy the URL and paste it below
-    // Google Sheet disabled temporarily — using fallback data until sheet publishing syncs
-    // sheetUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRDg2BLQStfvp9iaR0Mypw1MmX6xCeURVemGfLwi1FIywrNnsTA_0-XXdof8TB6SIFCf0On5TZbEmfr/pub?gid=316725428&single=true&output=csv',
-    sheetUrl: '',
+    sheetUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRDg2BLQStfvp9iaR0Mypw1MmX6xCeURVemGfLwi1FIywrNnsTA_0-XXdof8TB6SIFCf0On5TZbEmfr/pub?gid=316725428&single=true&output=csv',
 
     // Fallback data (used if Google Sheet fails to load)
     fallbackShows: [
-        { date: '2026-06-26', venue: 'Oakland Ballers Phish Night', location: 'Oakland, CA' },
-        { date: '2026-06-20', venue: 'Cornerstone Berkeley', location: 'Berkeley, CA' },
-        { date: '2026-06-19', venue: 'Felton Music Hall', location: 'Felton, CA' },
-        { date: '2026-05-16', venue: 'Hopmonk Sebastopol', location: 'Sebastopol, CA', ticketLink: 'https://www.eventim.us/wafform.aspx?_act=eventtickets&_pky=687207' },
+        { date: '2026-06-26', venue: 'Ballers Stadium', location: 'Oakland, CA', ticketLink: 'https://tickets.oaklandballers.com/s/q3BeLdqI' },
+        { date: '2026-06-20', venue: 'Cornerstone', location: 'Berkeley, CA', ticketLink: 'https://www.prekindle.com/event/59759-chum-berkeley' },
+        { date: '2026-06-19', venue: 'Felton Music Hall', location: 'Felton, CA', ticketLink: 'https://www.prekindle.com/event/57913-chum-a-tribute-to-phish-felton' },
+        { date: '2026-05-16', venue: 'Hopmonk', location: 'Sebastopol, CA', ticketLink: 'https://www.eventim.us/wafform.aspx?_act=eventtickets&_pky=687207' },
         { date: '2026-04-18', venue: 'Shakedown Tuscany', location: 'Phish After Party' },
         { date: '2026-03-07', venue: 'The Crepe Place', location: 'Santa Cruz, CA' },
         { date: '2025-04-05', venue: 'Ivy Room', location: 'Albany, CA', archiveId: 'Chum2025-04-05' },
