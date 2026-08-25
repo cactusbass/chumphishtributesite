@@ -102,6 +102,7 @@ ul, ol { list-style: none; }
 .show-picker-btn.active { background: var(--color-primary); border-color: var(--color-primary); }
 .show-picker-btn .show-date { font-weight: 600; font-size: 0.9rem; }
 .show-picker-btn .show-venue { font-size: 0.8rem; color: var(--color-text-dim); margin-top: 2px; }
+.show-picker-loading { padding: var(--space-md); font-size: 0.85rem; color: var(--color-text-muted); text-align: center; font-style: italic; }
 .show-picker-btn.active .show-venue { color: rgba(255, 255, 255, 0.8); }
 .archive-link { display: flex; align-items: center; gap: var(--space-sm); margin-top: var(--space-lg); font-size: 0.85rem; color: var(--color-text-muted); }
 .archive-link:hover { color: var(--color-accent); }
@@ -212,6 +213,7 @@ ul, ol { list-style: none; }
 .member-list li:last-child { border-bottom: none; }
 .member-name { display: block; font-weight: 600; margin-bottom: 2px; }
 .member-role { font-size: 0.85rem; color: var(--color-text-muted); }
+.member-memorial { margin-top: var(--space-lg); padding-top: var(--space-md); border-top: 1px solid var(--color-border); font-size: 0.85rem; font-style: italic; color: var(--color-text-muted); text-align: center; }
 
 .contact-wrapper { max-width: 600px; margin: 0 auto; }
 .booking-info { text-align: center; background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-lg); margin-bottom: var(--space-lg); }

@@ -34,15 +34,54 @@ const Navigation = {
 
 const Player = {
     collectionId: 'ChumATributeToPhish',
-    shows: [
+    // Static fallback: used if Archive.org's advancedsearch endpoint fails.
+    // Kept as a small curated list; refresh periodically or when the API is flaky.
+    fallbackShows: [
+        { id: 'Chum2025-09-20', date: '2025-09-20', venue: 'Woodhouse Brewing', location: 'Santa Cruz, CA' },
+        { id: 'Chum2025-07-18', date: '2025-07-18', venue: 'Woodhouse Brewery', location: 'Santa Cruz, CA' },
+        { id: 'Chum2025-07-12', date: '2025-07-12', venue: 'HopMonk Sebastopol', location: 'Sebastopol, CA' },
         { id: 'Chum2025-04-05', date: '2025-04-05', venue: 'Ivy Room', location: 'Albany, CA' },
         { id: 'Chum2025-04-04', date: '2025-04-04', venue: 'Woodhouse Brewery', location: 'Santa Cruz, CA' },
+        { id: 'Chum2025-02-28', date: '2025-02-28', venue: 'Boom Boom Room', location: 'San Francisco, CA' },
         { id: 'Chum2025-02-01', date: '2025-02-01', venue: 'Crazy Horse', location: 'Nevada City, CA' },
-        { id: 'Chum2024-03-15', date: '2024-03-15', venue: 'Ivy Room', location: 'Albany, CA' },
         { id: 'Chum2024-07-20', date: '2024-07-20', venue: "Mink's", location: 'San Rafael, CA' },
     ],
+    shows: [],
     currentShow: null, tracks: [], currentTrackIndex: 0, isPlaying: false, elements: {},
-    init() { this.cacheElements(); this.renderShowPicker(); this.bindEvents(); },
+    async init() {
+        this.cacheElements();
+        this.bindEvents();
+        await this.loadShows();
+        this.renderShowPicker();
+    },
+    async loadShows() {
+        const url = `https://archive.org/advancedsearch.php?q=collection%3A${this.collectionId}&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=date&fl%5B%5D=venue&fl%5B%5D=coverage&sort%5B%5D=date+desc&rows=8&output=json`;
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const data = await response.json();
+            const docs = data?.response?.docs || [];
+            if (!docs.length) throw new Error('No shows returned from Archive.org');
+            this.shows = docs
+                .filter(doc => doc.identifier && doc.date)
+                .map(doc => ({
+                    id: doc.identifier,
+                    date: doc.date.slice(0, 10),
+                    venue: doc.venue || this.venueFromTitle(doc.title) || 'Live Recording',
+                    location: doc.coverage || ''
+                }));
+            if (!this.shows.length) throw new Error('No valid shows after filtering');
+        } catch (err) {
+            console.warn('Listen: falling back to static show list.', err);
+            this.shows = this.fallbackShows;
+        }
+    },
+    venueFromTitle(title) {
+        if (!title) return '';
+        // Titles look like "Chum, A Tribute to Phish Live at <venue> on YYYY-MM-DD"
+        const m = title.match(/at\s+(.+?)\s+on\s+\d{4}-\d{2}-\d{2}/i);
+        return m ? m[1] : '';
+    },
     cacheElements() {
         this.elements = {
             showPicker: document.getElementById('show-picker'),
