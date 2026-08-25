@@ -35,16 +35,12 @@ const Navigation = {
 const Player = {
     collectionId: 'ChumATributeToPhish',
     // Static fallback: used if Archive.org's advancedsearch endpoint fails.
-    // Kept as a small curated list; refresh periodically or when the API is flaky.
+    // Kept small (4 shows) to match the live picker; refresh when the API is flaky.
     fallbackShows: [
+        { id: '20260822_SantaCruz', date: '2026-08-22', venue: 'Woodhouse', location: 'Santa Cruz, CA' },
+        { id: 'chum2026-06-20', date: '2026-06-20', venue: 'Cornerstone', location: 'Berkeley, CA' },
         { id: 'Chum2025-09-20', date: '2025-09-20', venue: 'Woodhouse Brewing', location: 'Santa Cruz, CA' },
         { id: 'Chum2025-07-18', date: '2025-07-18', venue: 'Woodhouse Brewery', location: 'Santa Cruz, CA' },
-        { id: 'Chum2025-07-12', date: '2025-07-12', venue: 'HopMonk Sebastopol', location: 'Sebastopol, CA' },
-        { id: 'Chum2025-04-05', date: '2025-04-05', venue: 'Ivy Room', location: 'Albany, CA' },
-        { id: 'Chum2025-04-04', date: '2025-04-04', venue: 'Woodhouse Brewery', location: 'Santa Cruz, CA' },
-        { id: 'Chum2025-02-28', date: '2025-02-28', venue: 'Boom Boom Room', location: 'San Francisco, CA' },
-        { id: 'Chum2025-02-01', date: '2025-02-01', venue: 'Crazy Horse', location: 'Nevada City, CA' },
-        { id: 'Chum2024-07-20', date: '2024-07-20', venue: "Mink's", location: 'San Rafael, CA' },
     ],
     shows: [],
     currentShow: null, tracks: [], currentTrackIndex: 0, isPlaying: false, elements: {},
@@ -60,7 +56,7 @@ const Player = {
         // Chum shows share the "Chum, A Tribute to Phish" creator field.
         // If an upload is missing that field on Archive.org, it won't show up
         // here — set it in the item's edit UI and it'll appear automatically.
-        const url = `https://archive.org/advancedsearch.php?q=creator%3A%22Chum%2C+A+Tribute+to+Phish%22&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=date&fl%5B%5D=venue&fl%5B%5D=coverage&sort%5B%5D=date+desc&rows=8&output=json`;
+        const url = `https://archive.org/advancedsearch.php?q=creator%3A%22Chum%2C+A+Tribute+to+Phish%22&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=date&fl%5B%5D=venue&fl%5B%5D=coverage&sort%5B%5D=date+desc&rows=4&output=json`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error(`HTTP ${response.status}`);
