@@ -55,7 +55,12 @@ const Player = {
         this.renderShowPicker();
     },
     async loadShows() {
-        const url = `https://archive.org/advancedsearch.php?q=collection%3A${this.collectionId}&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=date&fl%5B%5D=venue&fl%5B%5D=coverage&sort%5B%5D=date+desc&rows=8&output=json`;
+        // Query by creator instead of collection: newer 2026 uploads live in
+        // the "hifidelity" collection rather than ChumATributeToPhish, but all
+        // Chum shows share the "Chum, A Tribute to Phish" creator field.
+        // If an upload is missing that field on Archive.org, it won't show up
+        // here — set it in the item's edit UI and it'll appear automatically.
+        const url = `https://archive.org/advancedsearch.php?q=creator%3A%22Chum%2C+A+Tribute+to+Phish%22&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=date&fl%5B%5D=venue&fl%5B%5D=coverage&sort%5B%5D=date+desc&rows=8&output=json`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error(`HTTP ${response.status}`);
