@@ -79,8 +79,15 @@ const Player = {
     },
     venueFromTitle(title) {
         if (!title) return '';
-        // Titles look like "Chum, A Tribute to Phish Live at <venue> on YYYY-MM-DD"
-        const m = title.match(/at\s+(.+?)\s+on\s+\d{4}-\d{2}-\d{2}/i);
+        // Handle every title format we've seen from Archive.org uploads:
+        //   "...Live at <venue> on YYYY-MM-DD"           (older uploads, e.g. Chum2025-09-20)
+        //   "...Live at <venue> on <Month D>, YYYY"      (Felton June 19, 2026)
+        //   "...Live at <venue> <Month D>, YYYY"         (Cornerstone June 20, 2026; Woodhouse Aug 22, 2026)
+        const months = '(?:January|February|March|April|May|June|July|August|September|October|November|December)';
+        const m = title.match(new RegExp(
+            `at\\s+(.+?)\\s+(?:on\\s+)?(?:\\d{4}-\\d{2}-\\d{2}|${months}\\s+\\d+,?\\s+\\d{4})`,
+            'i'
+        ));
         return m ? m[1] : '';
     },
     cacheElements() {
