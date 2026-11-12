@@ -37,10 +37,10 @@ const Player = {
     // Static fallback: used if Archive.org's advancedsearch endpoint fails.
     // Kept small (4 shows) to match the live picker; refresh when the API is flaky.
     fallbackShows: [
+        { id: 'chum20261108', date: '2026-11-08', venue: 'Hopmonk Novato', location: 'Novato, CA' },
         { id: '20260822_SantaCruz', date: '2026-08-22', venue: 'Woodhouse', location: 'Santa Cruz, CA' },
         { id: 'chum2026-06-20', date: '2026-06-20', venue: 'Cornerstone', location: 'Berkeley, CA' },
-        { id: 'Chum2025-09-20', date: '2025-09-20', venue: 'Woodhouse Brewing', location: 'Santa Cruz, CA' },
-        { id: 'Chum2025-07-18', date: '2025-07-18', venue: 'Woodhouse Brewery', location: 'Santa Cruz, CA' },
+        { id: 'chum-20260619-felton-music-hall', date: '2026-06-19', venue: 'Felton Music Hall', location: 'Felton, CA' },
     ],
     shows: [],
     currentShow: null, tracks: [], currentTrackIndex: 0, isPlaying: false, elements: {},
@@ -195,14 +195,21 @@ const Shows = {
     // 3. Copy the URL and paste it below
     sheetUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRDg2BLQStfvp9iaR0Mypw1MmX6xCeURVemGfLwi1FIywrNnsTA_0-XXdof8TB6SIFCf0On5TZbEmfr/pub?gid=316725428&single=true&output=csv',
 
-    // Fallback data (used if Google Sheet fails to load)
+    // Fallback data (used if Google Sheet fails to load, and merged as historical archive when sheet only lists upcoming dates)
     fallbackShows: [
+        { date: '2027-01-15', venue: "Moe's Alley", location: 'Santa Cruz, CA', ticketLink: 'https://moesalley.com/tm-event/no-brainer-productions-presents-chum-a-tribute-to-phish/' },
+        { date: '2026-12-04', venue: 'Green Room Social Club', location: 'Placerville, CA', ticketLink: 'https://tickets.clubgreenroom.com/e/chum-tribute-to-phish/tickets' },
+        { date: '2026-11-08', venue: 'HopMonk Novato', location: 'Novato, CA', archiveId: 'chum20261108' },
+        { date: '2026-08-22', venue: 'Woodhouse Blending & Brewing', location: 'Santa Cruz, CA', archiveId: '20260822_SantaCruz' },
         { date: '2026-06-26', venue: 'Ballers Stadium', location: 'Oakland, CA', ticketLink: 'https://tickets.oaklandballers.com/s/q3BeLdqI' },
-        { date: '2026-06-20', venue: 'Cornerstone', location: 'Berkeley, CA', ticketLink: 'https://www.prekindle.com/event/59759-chum-berkeley' },
-        { date: '2026-06-19', venue: 'Felton Music Hall', location: 'Felton, CA', ticketLink: 'https://www.prekindle.com/event/57913-chum-a-tribute-to-phish-felton' },
-        { date: '2026-05-16', venue: 'Hopmonk', location: 'Sebastopol, CA', ticketLink: 'https://www.eventim.us/wafform.aspx?_act=eventtickets&_pky=687207' },
-        { date: '2026-04-18', venue: 'Shakedown Tuscany', location: 'Phish After Party' },
+        { date: '2026-06-20', venue: 'Cornerstone', location: 'Berkeley, CA', archiveId: 'chum2026-06-20', ticketLink: 'https://www.prekindle.com/event/59759-chum-berkeley' },
+        { date: '2026-06-19', venue: 'Felton Music Hall', location: 'Felton, CA', archiveId: 'chum-20260619-felton-music-hall', ticketLink: 'https://www.prekindle.com/event/57913-chum-a-tribute-to-phish-felton' },
+        { date: '2026-05-16', venue: 'HopMonk Sebastopol', location: 'Sebastopol, CA', archiveId: '2026-05-16_Hopmonk_Sebastopol', ticketLink: 'https://www.eventim.us/wafform.aspx?_act=eventtickets&_pky=687207' },
+        { date: '2026-04-18', venue: 'Shakedown Tuscany', location: 'Las Vegas, NV (Phish After Party)' },
         { date: '2026-03-07', venue: 'The Crepe Place', location: 'Santa Cruz, CA' },
+        { date: '2025-09-20', venue: 'Woodhouse Brewing', location: 'Santa Cruz, CA', archiveId: 'Chum2025-09-20' },
+        { date: '2025-07-18', venue: 'Woodhouse Brewery', location: 'Santa Cruz, CA', archiveId: 'Chum2025-07-18' },
+        { date: '2025-07-12', venue: 'HopMonk Sebastopol', location: 'Sebastopol, CA', archiveId: 'Chum2025-07-12' },
         { date: '2025-04-05', venue: 'Ivy Room', location: 'Albany, CA', archiveId: 'Chum2025-04-05' },
         { date: '2025-04-04', venue: 'Woodhouse Brewery', location: 'Santa Cruz, CA', archiveId: 'Chum2025-04-04' },
         { date: '2025-02-01', venue: 'Crazy Horse', location: 'Nevada City, CA', archiveId: 'Chum2025-02-01' },
@@ -233,8 +240,16 @@ const Shows = {
             const cacheBuster = `&_=${Date.now()}`;
             const response = await fetch(this.sheetUrl + cacheBuster);
             const csvText = await response.text();
-            this.allShows = this.parseCSV(csvText);
-            console.log(`Loaded ${this.allShows.length} shows from Google Sheet`);
+            const sheetShows = this.parseCSV(csvText);
+            const sheetDates = new Set(sheetShows.map(s => s.date));
+            const now = new Date();
+            now.setHours(0, 0, 0, 0);
+            // Preserve past fallback shows (with Archive.org links) when the sheet only tracks upcoming dates
+            const pastFallbacks = this.fallbackShows.filter(
+                s => !sheetDates.has(s.date) && new Date(s.date + 'T00:00:00') < now
+            );
+            this.allShows = [...sheetShows, ...pastFallbacks];
+            console.log(`Loaded ${sheetShows.length} shows from Google Sheet (+${pastFallbacks.length} archived past shows)`);
         } catch (error) {
             console.error('Error loading shows from Google Sheet:', error);
             this.allShows = this.fallbackShows;
