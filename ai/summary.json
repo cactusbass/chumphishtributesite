@@ -1,0 +1,65 @@
+{
+  "name": "CHUM — A Tribute to Phish",
+  "alternateName": "Chum",
+  "url": "https://chumphishtribute.com/",
+  "description": "Chum is a San Francisco Bay Area Phish tribute band active since 2010, performing Phish's intricate composed catalog and multi-era live improvisation across Northern California and the West Coast.",
+  "foundingDate": "2010",
+  "location": "San Francisco Bay Area, CA",
+  "genres": [
+    "Phish Tribute",
+    "Jam Band",
+    "Improvisational Rock",
+    "Live Rock"
+  ],
+  "lineup": [
+    {
+      "name": "Eric Ingersoll",
+      "role": "Keyboards & Vocals"
+    },
+    {
+      "name": "Chris Detrick",
+      "role": "Guitar & Vocals"
+    },
+    {
+      "name": "Chad Kimner",
+      "role": "Bass & Vocals"
+    },
+    {
+      "name": "Alex Bowman",
+      "role": "Drums & Vocals"
+    },
+    {
+      "name": "Eric Schiff",
+      "role": "Guitar (occasional guest appearances from Sweden)"
+    }
+  ],
+  "inMemoriam": "John Greene (Keyboards & Vocals, March 2014 – July 2025)",
+  "bookingContact": {
+    "agency": "No Brainer Productions",
+    "email": "nobrainerproductions831@gmail.com"
+  },
+  "generalContact": "chumphishtribute@gmail.com",
+  "links": {
+    "website": "https://chumphishtribute.com/",
+    "pressKit": "https://chumphishtribute.com/press.html",
+    "liveRecordingsArchive": "https://archive.org/details/ChumATributeToPhish",
+    "facebook": "https://www.facebook.com/ChumPhishTribute",
+    "instagram": "https://www.instagram.com/chumphishband",
+    "llmsTxt": "https://chumphishtribute.com/llms.txt",
+    "llmsFullTxt": "https://chumphishtribute.com/llms-full.txt",
+    "rssFeed": "https://chumphishtribute.com/feed.xml"
+  },
+  "webmcp": {
+    "available": true,
+    "tools": [
+      {
+        "name": "subscribe_chum_mailing_list",
+        "description": "Subscribe an email address to Chum's mailing list for upcoming Northern California Phish tribute show announcements and new Live Music Archive recordings."
+      },
+      {
+        "name": "contact_chum_band",
+        "description": "Send a general message or inquiry to Chum (San Francisco Bay Area Phish tribute band)."
+      }
+    ]
+  }
+}
