@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CHUM — A Tribute to Phish (News &amp; Shows)</title>
+    <link>https://chumphishtribute.com/</link>
+    <description>Official news, band updates, and Northern California show announcements from Chum, the San Francisco Bay Area Phish tribute band active since 2010.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chumphishtribute.com/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Featured in Surrender to the Flow (Dick's 2026 Issue): Phish Tributes</title>
+      <link>https://chumphishtribute.com/press.html</link>
+      <guid isPermaLink="true">https://chumphishtribute.com/press.html</guid>
+      <pubDate>Sat, 01 Aug 2026 12:00:00 +0000</pubDate>
+      <description>Chum is profiled in Sydne Kasle's national Phish tribute feature in Surrender to the Flow alongside Pink Talking Fish, The Last Rewind, and Kids Under the Carpet.</description>
+    </item>
+    <item>
+      <title>On AI Art and Posters</title>
+      <link>https://chumphishtribute.com/posts/on-ai-art-and-posters.html</link>
+      <guid isPermaLink="true">https://chumphishtribute.com/posts/on-ai-art-and-posters.html</guid>
+      <pubDate>Sun, 04 Jan 2026 12:00:00 +0000</pubDate>
+      <description>We've seen some comments about our use of AI-generated art for show posters, and we wanted to respond as thoughtfully as possible.</description>
+    </item>
+    <item>
+      <title>Miss You — Remembering John Greene</title>
+      <link>https://chumphishtribute.com/posts/miss-you-john.html</link>
+      <guid isPermaLink="true">https://chumphishtribute.com/posts/miss-you-john.html</guid>
+      <pubDate>Tue, 02 Dec 2025 12:00:00 +0000</pubDate>
+      <description>Remembering our dear brother John Greene (2014–2025), keyboardist and vocalist for Chum.</description>
+    </item>
+  </channel>
+</rss>

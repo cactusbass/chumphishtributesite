@@ -1,0 +1,23 @@
+{
+  "name": "CHUM — A Tribute to Phish",
+  "description": "Official agent card and information service for Chum, the San Francisco Bay Area Phish tribute band active since 2010.",
+  "url": "https://chumphishtribute.com/",
+  "version": "1.0.0",
+  "provider": {
+    "organization": "Chum / No Brainer Productions",
+    "url": "https://chumphishtribute.com/"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/markdown", "application/json"],
+  "skills": [
+    {
+      "id": "tour-dates-and-recordings",
+      "name": "Tour Dates, Live Archive & Booking Info",
+      "description": "Provides upcoming Northern California tour dates, links to 47+ free live concert recordings on Archive.org, press kit assets, and booking contact information."
+    }
+  ]
+}

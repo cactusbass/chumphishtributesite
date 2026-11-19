@@ -1,0 +1,13 @@
+# /.well-known/ai.txt — AI Crawler & Answer Engine Permissions for chumphishtribute.com
+User-agent: *
+Allow: /
+
+Site-Name: CHUM — A Tribute to Phish
+Canonical-URL: https://chumphishtribute.com/
+LLMs-Txt: https://chumphishtribute.com/llms.txt
+LLMs-Full-Txt: https://chumphishtribute.com/llms-full.txt
+AI-Summary: https://chumphishtribute.com/ai/summary.json
+AI-FAQ: https://chumphishtribute.com/ai/faq.json
+AI-Service: https://chumphishtribute.com/ai/service.json
+RSS-Feed: https://chumphishtribute.com/feed.xml
+Contact: mailto:nobrainerproductions831@gmail.com
