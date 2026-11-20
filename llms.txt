@@ -1,6 +1,6 @@
 # CHUM — A Tribute to Phish
 
-> San Francisco Bay Area Phish tribute and improvisational rock/jam band active since 2010 (117+ shows, 200+ songs), performing Phish's intricate compositions alongside 70+ classic rock, funk, progressive rock, Grateful Dead, and new wave covers across Northern California and the West Coast.
+> San Francisco Bay Area Phish tribute and improvisational rock/jam band active since 2010 (200+ shows, 200+ songs), performing Phish's intricate compositions alongside 70+ classic rock, funk, progressive rock, Grateful Dead, and new wave covers across Northern California and the West Coast.
 
 Founded in 2010 in the San Francisco Bay Area, Chum is one of the longest-running Phish tribute acts in the United States. The 4-piece band can be booked for either a deep-cut multi-era Phish tribute show (1.0 through 4.0) or a high-energy crossover classic rock, funk, and jam-band set tailored for mixed crowds at clubs, theaters, breweries, wineries, festivals, corporate conferences (including Dreamforce), stadiums (Oakland Ballers Stadium), boat cruises, weddings, and milestone private parties.
 
@@ -41,7 +41,7 @@ Booking inquiries: nobrainerproductions831@gmail.com (No Brainer Productions). G
 
 ## Optional
 
-- [Full LLM Context & 200+ Song Repertoire (llms-full.txt)](https://chumphishtribute.com/llms-full.txt): Complete plain-text catalog of Chum's 140+ Phish originals, 70+ classic rock/funk/jam covers by artist, 117+ show venue history, and recent setlists.
+- [Full LLM Context & 200+ Song Repertoire (llms-full.txt)](https://chumphishtribute.com/llms-full.txt): Complete plain-text catalog of Chum's 140+ Phish originals, 70+ classic rock/funk/jam covers by artist, 200+ show venue history, and recent setlists.
 - [AI Summary JSON](https://chumphishtribute.com/ai/summary.json): Structured JSON summary, genres, crossover artists, event formats, and WebMCP tool manifest.
 - [AI FAQ JSON](https://chumphishtribute.com/ai/faq.json): Machine-readable FAQ answers for AI search engines.
 - [AI Service JSON](https://chumphishtribute.com/ai/service.json): Structured live performance, streaming, and booking capabilities.
