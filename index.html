@@ -110,9 +110,16 @@
           },
           "genre": [
             "Jam Band",
-            "Rock",
+            "Classic Rock",
+            "Funk Rock",
+            "Progressive Rock",
             "Phish Tribute",
             "Improvisational Rock"
+          ],
+          "knowsAbout": [
+            "Phish multi-era live repertoire (1.0 through 4.0)",
+            "Talking Heads, Grateful Dead, Rolling Stones, Beatles, Led Zeppelin, David Bowie, Pink Floyd, Frank Zappa, Little Feat, Stevie Wonder, ZZ Top, The Cars, Velvet Underground, and King Gizzard live covers",
+            "Improvisational live rock concerts for clubs, theaters, breweries, wineries, festivals, corporate events, and private parties"
           ],
           "image": "https://chumphishtribute.com/Images/chum4689.jpg",
           "logo": "https://chumphishtribute.com/Images/CHUM_Logo_CenteredText.png",
@@ -296,7 +303,23 @@
               "name": "How do I book Chum for a venue, festival, or private event?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "For booking inquiries, contact No Brainer Productions at nobrainerproductions831@gmail.com."
+                "text": "For booking inquiries, contact No Brainer Productions at nobrainerproductions831@gmail.com. Chum is a 4-piece band available for 1-set, 2-set, or 3+ hour shows across the San Francisco Bay Area, Santa Cruz, Wine Country, Sacramento/Foothills, Lake Tahoe, and the West Coast."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Chum only play Phish songs, or can they play a broader classic rock and jam-band set?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In addition to 140+ Phish originals spanning eras 1.0 through 4.0, Chum's 200+ song repertoire includes 70+ classic rock, funk, progressive rock, new wave, Grateful Dead, and bluegrass covers across 35+ artists including Talking Heads, The Rolling Stones, The Beatles, Led Zeppelin, David Bowie, Pink Floyd, Frank Zappa, Little Feat, Stevie Wonder, ZZ Top, The Cars, The Velvet Underground, and King Gizzard & The Lizard Wizard. Chum can tailor either a deep-cut Phish tribute show or a high-energy crossover classic-rock and jam set for breweries, festivals, corporate events, and private parties."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What venues and special events has Chum played?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Over 117+ shows since 2010, Chum has headlined flagship Northern California venues including Great American Music Hall (SF), The UC Theatre (Berkeley), The Chapel (SF), The Catalyst (Santa Cruz), Terrapin Crossroads Grate Room (San Rafael), Crystal Bay Casino (Lake Tahoe), Cornerstone (Berkeley), Felton Music Hall, Moe's Alley, and HopMonk Tavern, alongside corporate and special events including Dreamforce, Oakland Ballers Stadium, Las Vegas Phish Sphere after-parties, SF Bay boat cruises, weddings, and milestone private parties."
               }
             }
           ]
@@ -548,8 +571,8 @@
                             </div>
                             <div class="now-playing-info">
                                 <span class="now-playing-label">Now Playing</span>
-                                <span class="now-playing-track" id="current-track-title">Select a show to begin</span>
-                                <span class="now-playing-show" id="current-show-name"></span>
+                                <span class="now-playing-track" id="current-track-title">Select a track to play</span>
+                                <span class="now-playing-show" id="current-show-name">Hopmonk Novato - Nov 8, 2026</span>
                             </div>
                         </div>
 
@@ -589,10 +612,21 @@
                     <div class="track-list-wrapper">
                         <h3 class="track-list-title">Setlist</h3>
                         <div class="track-list" id="track-list">
-                            <div class="track-list-empty">
-                                <i class="fas fa-music"></i>
-                                <span>Select a show above</span>
-                            </div>
+                            <div class="track-item active" data-index="0"><span class="track-num">01</span><span class="track-name">The Divided Sky</span></div>
+                            <div class="track-item" data-index="1"><span class="track-num">02</span><span class="track-name">Ya Mar</span></div>
+                            <div class="track-item" data-index="2"><span class="track-num">03</span><span class="track-name">Foam</span></div>
+                            <div class="track-item" data-index="3"><span class="track-num">04</span><span class="track-name">Pillow Jets</span></div>
+                            <div class="track-item" data-index="4"><span class="track-num">05</span><span class="track-name">Halfway to the Moon</span></div>
+                            <div class="track-item" data-index="5"><span class="track-num">06</span><span class="track-name">Roggae</span></div>
+                            <div class="track-item" data-index="6"><span class="track-num">07</span><span class="track-name">Birds of a Feather</span></div>
+                            <div class="track-item" data-index="7"><span class="track-num">08</span><span class="track-name">Crowd Control</span></div>
+                            <div class="track-item" data-index="8"><span class="track-num">09</span><span class="track-name">Harry Hood</span></div>
+                            <div class="track-item" data-index="9"><span class="track-num">10</span><span class="track-name">Ghost</span></div>
+                            <div class="track-item" data-index="10"><span class="track-num">11</span><span class="track-name">Harpua &rarr; Moving in Stereo (The Cars) &rarr; Harpua</span></div>
+                            <div class="track-item" data-index="11"><span class="track-num">12</span><span class="track-name">The Mango Song</span></div>
+                            <div class="track-item" data-index="12"><span class="track-num">13</span><span class="track-name">Runaway Jim</span></div>
+                            <div class="track-item" data-index="13"><span class="track-num">14</span><span class="track-name">The Squirming Coil</span></div>
+                            <div class="track-item" data-index="14"><span class="track-num">15</span><span class="track-name">La Grange (ZZ Top)</span></div>
                         </div>
                     </div>
                 </div>
@@ -721,6 +755,36 @@
         <section id="contact" class="section section-alt">
             <div class="container">
                 <h2 class="section-title">Get in Touch</h2>
+
+                <div class="booking-highlights">
+                    <div class="booking-card">
+                        <h3>Setlist Modes</h3>
+                        <p>Book a <strong>multi-era Phish tribute show</strong> (1.0&ndash;4.0 deep cuts &amp; complex suites) or a <strong>high-energy crossover jam, funk &amp; classic rock set</strong> tailored for mixed crowds.</p>
+                    </div>
+                    <div class="booking-card">
+                        <h3>Crossover Repertoire (200+ Songs)</h3>
+                        <p>Alongside Phish's most demanding compositions, our cover catalog spans 35+ artists:</p>
+                        <div class="booking-pills">
+                            <span class="booking-pill">Talking Heads</span>
+                            <span class="booking-pill">Grateful Dead</span>
+                            <span class="booking-pill">Rolling Stones</span>
+                            <span class="booking-pill">Beatles</span>
+                            <span class="booking-pill">Led Zeppelin</span>
+                            <span class="booking-pill">David Bowie</span>
+                            <span class="booking-pill">Pink Floyd</span>
+                            <span class="booking-pill">Frank Zappa</span>
+                            <span class="booking-pill">Stevie Wonder</span>
+                            <span class="booking-pill">ZZ Top</span>
+                            <span class="booking-pill">Little Feat</span>
+                            <span class="booking-pill">King Gizzard</span>
+                        </div>
+                    </div>
+                    <div class="booking-card">
+                        <h3>Event Formats &amp; Region</h3>
+                        <p>4-piece band available for 1-set, 2-set, or 3+ hour shows at <strong>clubs, theaters, breweries, wineries, festivals, corporate events &amp; private parties</strong> across the SF Bay Area, Santa Cruz, Wine Country, Foothills &amp; Lake Tahoe.</p>
+                    </div>
+                </div>
+
                 <div class="contact-wrapper">
                     <div class="booking-info">
                         <p>For booking inquiries, please contact <a href="mailto:nobrainerproductions831@gmail.com">nobrainerproductions831@gmail.com</a></p>

@@ -1,12 +1,17 @@
 # CHUM — A Tribute to Phish (San Francisco Bay Area)
 
-Founded in the San Francisco Bay Area in 2010, **Chum** is one of the longest-running Phish tribute bands in the United States, performing Phish's intricate compositions alongside multi-era live improvisation across Northern California and the West Coast.
+Founded in the San Francisco Bay Area in 2010, **Chum** is one of the longest-running Phish tribute bands in the United States, performing 200+ songs spanning Phish's intricate compositions and multi-era live improvisation alongside 70+ classic rock, funk, progressive rock, Grateful Dead, and new wave covers across Northern California and the West Coast.
 
 - **Official Website:** https://chumphishtribute.com/
 - **Press Kit:** https://chumphishtribute.com/press.html
 - **Live Recordings (47+ full concerts):** https://archive.org/details/ChumATributeToPhish
 - **Booking Contact:** No Brainer Productions (`nobrainerproductions831@gmail.com`)
 - **General Inquiries:** `chumphishtribute@gmail.com`
+
+## Booking & Crossover Repertoire
+- **Setlist Modes:** Book a multi-era Phish tribute show (1.0–4.0 deep cuts & complex suites) or a high-energy crossover jam, funk & classic rock set tailored for mixed crowds.
+- **Crossover Cover Artists (35+ artists, 70+ covers):** Talking Heads, Grateful Dead, The Rolling Stones, The Beatles / John Lennon, Led Zeppelin, David Bowie, Pink Floyd, Frank Zappa, Stevie Wonder, ZZ Top, Little Feat, The Cars, The Velvet Underground, King Gizzard & The Lizard Wizard.
+- **Event Formats & Region:** 4-piece band available for 1-set, 2-set, or 3+ hour shows at clubs, theaters, breweries, wineries, festivals, corporate events (including Dreamforce), and private parties across the SF Bay Area, Santa Cruz, Wine Country, Foothills, and Lake Tahoe.
 
 ## Lineup
 - **Eric Ingersoll** — Keys & Vocals
@@ -19,6 +24,9 @@ Founded in the San Francisco Bay Area in 2010, **Chum** is one of the longest-ru
 ## Upcoming Shows
 - **Friday, December 4, 2026:** Green Room Social Club — Placerville, CA ([Tickets](https://tickets.clubgreenroom.com/e/chum-tribute-to-phish/tickets))
 - **Friday, January 15, 2027:** Moe's Alley — Santa Cruz, CA ([Tickets](https://moesalley.com/tm-event/no-brainer-productions-presents-chum-a-tribute-to-phish/))
+
+## Featured Setlist (HopMonk Novato — November 8, 2026)
+The Divided Sky, Ya Mar, Foam, Pillow Jets, Halfway to the Moon, Roggae, Birds of a Feather, Crowd Control, Harry Hood, Ghost, Harpua -> Moving in Stereo (The Cars) -> Harpua, The Mango Song, Runaway Jim, The Squirming Coil, La Grange (ZZ Top).
 
 ## Recent Past Shows & Live Recordings
 - **Sunday, November 8, 2026:** HopMonk Novato — Novato, CA ([Listen on Archive.org](https://archive.org/details/chum20261108))
