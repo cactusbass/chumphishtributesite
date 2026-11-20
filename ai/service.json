@@ -1,11 +1,12 @@
 {
-  "name": "CHUM — San Francisco Bay Area Phish Tribute Band",
+  "name": "CHUM — San Francisco Bay Area Phish Tribute & Improvisational Rock Band",
   "url": "https://chumphishtribute.com/",
   "provider": "Chum / No Brainer Productions",
   "capabilities": [
-    "Live concert performances of Phish's multi-era songbook (1.0 through 4.0) across Northern California and the West Coast",
+    "Multi-era Phish tribute shows (1.0 through 4.0) featuring complex composed suites and Type II improvisation for clubs, theaters, and concert after-parties",
+    "High-energy crossover classic rock, funk, progressive rock, Grateful Dead, and jam-band sets (200+ song catalog, 35+ cover artists) tailored for breweries, wineries, festivals, corporate events (e.g., Dreamforce), and milestone private parties",
+    "4-piece band available for 1-set, 2-set, or 3+ hour performances across the SF Bay Area, Santa Cruz, Sonoma/Napa Wine Country, Sacramento/Foothills, Lake Tahoe, and the West Coast",
     "Free live concert streaming and full-show downloads via the Internet Archive Live Music Archive (47+ recordings)",
-    "Club, theater, festival, after-party, and private event bookings via No Brainer Productions (nobrainerproductions831@gmail.com)",
-    "Official press kit with high-resolution live photography, band logo, stage plot PDF, and national press coverage"
+    "Official press kit with high-resolution live photography, band logo, venue history, and stage plot PDF"
   ]
 }

@@ -2,14 +2,61 @@
   "name": "CHUM — A Tribute to Phish",
   "alternateName": "Chum",
   "url": "https://chumphishtribute.com/",
-  "description": "Chum is a San Francisco Bay Area Phish tribute band active since 2010, performing Phish's intricate composed catalog and multi-era live improvisation across Northern California and the West Coast.",
+  "description": "Chum is a San Francisco Bay Area Phish tribute and improvisational jam/classic-rock band active since 2010 (117+ shows, 200+ song repertoire spanning Phish 1.0–4.0 and 70+ classic rock, funk, prog, Grateful Dead, and new wave covers across 35+ artists).",
   "foundingDate": "2010",
   "location": "San Francisco Bay Area, CA",
+  "serviceAreas": [
+    "San Francisco Bay Area",
+    "Oakland & East Bay",
+    "Berkeley",
+    "Marin County",
+    "Sonoma & Napa Wine Country",
+    "Santa Cruz",
+    "Silicon Valley & Peninsula",
+    "Sacramento & Sierra Foothills",
+    "Lake Tahoe",
+    "West Coast"
+  ],
   "genres": [
     "Phish Tribute",
     "Jam Band",
-    "Improvisational Rock",
-    "Live Rock"
+    "Classic Rock",
+    "Funk Rock",
+    "Progressive Rock",
+    "Improvisational Rock"
+  ],
+  "crossoverCoverArtists": [
+    "Talking Heads",
+    "Grateful Dead",
+    "The Rolling Stones",
+    "The Beatles",
+    "Led Zeppelin",
+    "David Bowie",
+    "Pink Floyd",
+    "The Who",
+    "Frank Zappa",
+    "Little Feat",
+    "Boston",
+    "The Allman Brothers Band",
+    "Stevie Wonder",
+    "ZZ Top",
+    "The Cars",
+    "The Velvet Underground",
+    "Jimi Hendrix",
+    "Paul Simon",
+    "Warren Zevon",
+    "Ween",
+    "TV on the Radio",
+    "Bob Marley",
+    "King Gizzard & The Lizard Wizard"
+  ],
+  "eventFormats": [
+    "Music Clubs & Theaters",
+    "Breweries, Wineries & Beer Gardens",
+    "Festivals & Concert After-Parties",
+    "Corporate Conferences (e.g., Dreamforce)",
+    "Stadium & Community Events (e.g., Oakland Ballers)",
+    "Weddings, Boat Cruises & Milestone Private Parties"
   ],
   "lineup": [
     {
@@ -58,7 +105,7 @@
       },
       {
         "name": "contact_chum_band",
-        "description": "Send a general message or inquiry to Chum (San Francisco Bay Area Phish tribute band)."
+        "description": "Send a general message or booking inquiry to Chum (San Francisco Bay Area Phish tribute & improvisational rock band)."
       }
     ]
   }

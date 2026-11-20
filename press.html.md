@@ -16,6 +16,12 @@ Chum has wowed audiences with incredible versions of Phish's most intricate comp
 - *Eric Schiff (Guitar) joins us for occasional shows from Sweden.*
 - *In memory of John Greene (Keys & Vocals, 2014–2025)*
 
+## Repertoire & Notable Past Venues
+Across 117+ shows since 2010, Chum has built a 200+ song live repertoire spanning 140+ Phish originals (including *You Enjoy Myself*, *The Divided Sky*, *Reba*, *Fluffhead*, *Guyute*, *The Curtain With*, *It's Ice*, *Foam*, *Esther*, and *Colonel Forbin's Ascent > Fly Famous Mockingbird*) alongside 70+ classic rock, funk, progressive rock, new wave, Grateful Dead, and bluegrass covers across 35+ artists: Talking Heads, Grateful Dead, The Rolling Stones, The Beatles / John Lennon, Led Zeppelin, David Bowie, Pink Floyd, The Who, Frank Zappa, Little Feat, Boston, The Allman Brothers Band, Stevie Wonder, ZZ Top, The Cars, The Velvet Underground, Jimi Hendrix, Paul Simon, Warren Zevon, Ween, TV on the Radio, Bob Marley, and King Gizzard & The Lizard Wizard.
+
+- **Flagship Concert Halls & Clubs:** Great American Music Hall (SF), The UC Theatre (Berkeley), The Chapel (SF), The Catalyst (Santa Cruz), Terrapin Crossroads Grate Room (San Rafael), Crystal Bay Casino (Tahoe), Cornerstone (Berkeley), Felton Music Hall, Moe's Alley (Santa Cruz), HopMonk Tavern (Novato & Sebastopol), Boom Boom Room (SF), Brick & Mortar Music Hall (SF), 19 Broadway & Peri's (Fairfax), Ivy Room (Albany), Crazy Horse (Nevada City), Saint Rocke (Los Angeles).
+- **Festivals, Corporate & Private Events:** Dreamforce (Salesforce Conference), Oakland Ballers Stadium, Las Vegas Phish Sphere After-Parties, Commodore SF Bay Boat Cruise, Breweries & Wineries (Woodhouse, HopMonk), Weddings (Moraga & Marin), Milestone 50th Birthdays & Block Parties.
+
 ## Press Features
 - **"Phish Tributes: Capturing the Feeling I Forgot"** — By Sydne Kasle, *Surrender to the Flow* (Phish fanzine), Dick's 2026 Issue. Featured alongside Pink Talking Fish, The Last Rewind, and Kids Under the Carpet ([Download PDF](https://chumphishtribute.com/Images/press/surrender-to-the-flow-phish-tributes.pdf)).
 - **"Phish tribute band Chum quite the catch at Woodhouse Brewing"** — [Santa Cruz Sentinel, March 19, 2025](https://www.santacruzsentinel.com/2025/03/19/santa-cruz-phish-tribute-band-chum-quite-the-catch-at-woodhouse-brewing/)

@@ -49,6 +49,9 @@ const Player = {
         this.bindEvents();
         await this.loadShows();
         this.renderShowPicker();
+        if (this.shows.length) {
+            await this.loadShow(this.shows[0].id);
+        }
     },
     async loadShows() {
         // Query by creator instead of collection: newer 2026 uploads live in
